@@ -512,6 +512,16 @@ for (i in unique(penguins$species)) {
 }
 ```
 
+## Collaborative writing
+
+-   GitHub, GitLab, etc
+
+-   Google Docs ([trackdown](https://claudiozandonella.github.io/trackdown/))
+
+-   [redoc](https://noamross.github.io/redoc/)
+
+![](images/trackdown-workflow.png){height="900 px"}
+
 # Rmarkdown resources
 
 ## Rmarkdown website
