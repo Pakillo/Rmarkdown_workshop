@@ -1,0 +1,64 @@
+---
+title: "Does sunshine make people happy?"
+author: "F. Rodriguez-Sanchez"
+date: "20 January 2020"
+output: html_document
+---
+
+
+## Introduction
+
+It is well known that individual well-being can be influenced by climatic conditions. However, ...
+
+
+## Methods
+
+```{r echo=FALSE} 
+## Read data
+data <- read.table("data.txt", header = TRUE)
+# correct error
+data <- data[-12, ]
+
+# Fit linear model
+model <- lm(happiness ~ sunshine, data = data)
+
+```
+
+We collected data on `r nrow(data)` individuals and fitted a linear model:
+
+$$
+y = \alpha + \beta x + \epsilon 
+$$
+
+
+
+## Results
+
+We found that happiness is positively related to sunshine hours (slope = `r round(coef(model)[2], digits = 2)`).
+
+```{r echo=FALSE}
+# Print results
+library(xtable, quietly = TRUE)
+knitr::kable(xtable(model)) 
+```
+
+```{r echo=FALSE}
+# Plot
+visreg::visreg(model)
+```
+
+## Discussion
+
+These results confirm that sunshine is good for happiness.
+
+
+## Acknowledgements
+
+Y. Xie, J. MacFarlane, Rstudio...
+
+
+```{r echo=FALSE, eval=FALSE}
+sessionInfo()
+```
+
+## Cited references
