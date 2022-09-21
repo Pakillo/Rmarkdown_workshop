@@ -5,7 +5,7 @@ date: "4 February 2020"
 output: html_document
 params:
   data: coords.csv
-  sp: Sp1
+  sp: Sp2
 ---
 
 ```{r setup, include=FALSE}
