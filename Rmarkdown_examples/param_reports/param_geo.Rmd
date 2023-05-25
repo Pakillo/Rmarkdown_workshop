@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-coords <- read.csv("coords.csv")
+coords <- read.csv(params$data)
 ```
 
 ```{r}
